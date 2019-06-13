@@ -13,6 +13,14 @@
 
     <script>
         // 1. 透過console.log先確認事件是否有綁定成功
+        function changeMsg(){
+            // 方法1
+            // document.getElementById('demo').textContent = 'change';
+            
+            // 方法2
+            var temp = document.getElementById('demo');
+            temp.textContent = 'change1';
+        }
 
         // 2. 用ID取得網頁上面的元素
 
