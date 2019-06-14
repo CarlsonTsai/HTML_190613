@@ -12,7 +12,23 @@
     <!-- 2. 撰寫一個 <p>，點選後再 console.log 寫下一些訊息，且包住步驟一的 <button> -->
     <!-- 3. 撰寫一個 <div>，點選後再 console.log 寫下一些訊息，且包住步驟二的 <p> -->
     <!-- 4. 觀察 console.log 發生了什麼事情? -->
-  
+        <!-- 點選最內層的事件 會觸發所有外層的click事件 -->
+   <p onclick="pclick()" style="background-color:aqua">
+        <button onclick="btn(event)">按鈕</button>
+   </p>
+    
+    <div ></div>
+        
+    <script>
+        function btn(e){
+            console.log(e)
+            console.log('btnclick')
+            e.stopPropagation();
+        }
+        function pclick(){
+            console.log('pclick')
+        }
+    </script>
 </body>
 
 </html>
