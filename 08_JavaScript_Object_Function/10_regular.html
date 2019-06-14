@@ -46,12 +46,25 @@
           
 
         // 1. 驗證密碼是否有包含至少一位大寫英文
-
+        patt = /[A-Z]/;
+        var password = "A123456";
+        console.log(`${password}是否包含大寫 :${patt.test(password)}`);
+        
         // 2. 驗證輸入的文字是否有包含空白
+        patt = /\s/;
+        var name = "資策 會";
+        console.log(`${name}是否包含空白 :${patt.test(name)}`);
 
         // 3. 驗證身份證字號格式，第一碼是英文，後面是數字；例如：A123456789
+        patt = /^[A-Z]\d{9}$/;
+        var id = "P111111111";
+        console.log(`${id}身份證格式是否正確 :${patt.test(id)}`);
+
 
         // 4. 驗證車牌號碼，假設以 - 分隔，-前會有2-3碼英文，-後會有3-4碼數字
+        patt = /^[A-Z]{2,3}-\d{3,4}/;
+        var car = "PTT-0614";
+        console.log(`${car}車牌格式是否正確 :${patt.test(car)}`);
 
     </script>
 </body>

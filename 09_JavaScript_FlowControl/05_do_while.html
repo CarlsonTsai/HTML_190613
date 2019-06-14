@@ -20,11 +20,16 @@
     <p id="demo"></p>
 
     <script>
-        
-        // 透過 prompt 讓使用者輸入金額
-        
-        // 若輸入0表示不再輸入，進行畫面顯示結算金額
+        function sum() {
+            var tot = 0
+            do {
+                // 透過 prompt 讓使用者輸入金額
+                var input = parseInt(prompt('輸入金額'));
+                tot = tot + input;
+            } while (input != 0)//input 不等於0 持續進行
 
+            alert("總金額" + tot)
+        }
     </script>
 
 </body>

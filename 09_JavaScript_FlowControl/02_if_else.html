@@ -22,6 +22,22 @@
 
     <script>
         // 1. 取得系統現在時間(HH)
+        var d = new Date();
+        var hours = d.getHours();
+        console.log(hours)
+        
+
+        if( hours >= 8 && hours <=11 ){
+            console.log("上午課程")
+        }else if(hours == 12){
+            console.log("中午用餐")
+        }else if(hours >= 13 && hours<=16 ){
+            console.log("下午課程")
+        }else{
+            console.log('非課程時間')
+        }
+        hours <= 12 ? console.log('am') : console.log('pm')
+
         // 2. 如果是 8:00-11:59，顯示上午課程
         // 3. 如果是 12:00-12:59，顯示中午用餐時間
         // 4. 如果是 13:00-16:00，顯示下午課程

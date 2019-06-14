@@ -22,8 +22,33 @@
    </pre>
 
     <!-- 請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱 -->
-
+    <input type="text" id="num">
+    <button onclick="query()">輸入頻道</button>
+    <p id="demo">查詢結果</p>
     <script>
+
+        function query(){
+            
+            var elm = document.getElementById('num').value;
+            switch(elm){
+                case '20':
+                    result = 'TLC 旅遊生活頻道';
+                    break;
+                case '65':
+                    result = 'HBO';
+                    break;
+                case '66':
+                    result = '東森洋片台';
+                    break;
+                default:
+                    result = "無此頻道"
+                    break;
+            }
+           document.getElementById('demo').textContent = result;
+        }
+
+
+
         // 透過switch case設定底下對應項目
         // 20 ==> TLC 旅遊生活頻道
         // 65 ==> HBO

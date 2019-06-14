@@ -7,11 +7,34 @@
 </head>
 
 <body>
+        <p><a href="https://www.w3schools.com/js/js_events.asp" target="_blank">event</a></p>
+        <p><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">event list</a></p>
+        <p><a href="https://www.w3schools.com/jsref/obj_events.asp" target="_blank">event object</a></p>
 
-    <p><a href="https://www.w3schools.com/js/js_events.asp" target="_blank">event</a></p>
-    <p><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">event list</a></p>
-    <p><a href="https://www.w3schools.com/jsref/obj_events.asp" target="_blank">event object</a></p>
+    <h2>測試綁定 <i>onkeypress</i></h2>
+    <input type="text" onkeypress="press(event)">
+    <br>
+    <p>這裡會顯示keyCode:<span id="pp"></span></p>
+    <p> 這裡會顯示charCode:<span id="ppp"></span</p>
+    <hr>
+    <h2>測試綁定 <i>onkeydown</i></h2>
+    <input type="text" onkeydown="down(event)">
+    <br>
+    <p>這裡會顯示keyCode:<span id="qq"></span></p>
+    <p> 這裡會顯示charCode:<span id="qqq"></span</p>
+   
 
+    <script>
+        function press(obj){
+           document.getElementById('pp').innerHTML = obj.keyCode
+           document.getElementById('ppp').innerHTML = obj.charCode
+        }
+        function down(obj){
+           document.getElementById('qq').innerHTML = obj.keyCode
+           document.getElementById('qqq').innerHTML = obj.charCode
+        }
+   
+    </script>
 </body>
 
 </html>

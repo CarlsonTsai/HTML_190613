@@ -13,11 +13,21 @@
             // code block to be executed
         }
     </pre>
-
+    <p id="pp"></p>
+    <p id="ppp"></p>
     <!-- 設置三標籤 <pre> id 為 pTimes，另外兩個為<p> id分別為pSquare、pTriangle -->
 
     <script type="text/javascript">
         // 1. 使用for迴圈，列印出這個月份從1號到目前系統日
+
+            var d = new Date();
+            var today = d.getDate();
+            
+           
+        for(let i=1;i<=today;i++){
+            console.log("日期" + (d.getMonth()+1) +'/'+ i)
+            
+        }
 
         // 2. 使用for迴圈，逐一取得陣列裡面的元素
 
@@ -34,12 +44,31 @@
         // **** 
         // **** 
         // ****
+        var stars = "";
+        for(let j=1; j<=6; j++ ){
+            for(let i=1;i<=4;i++){
+                stars = stars + "*";
+            }
+            stars = stars + "<br>"
+        }
+        document.getElementById('pp').innerHTML = stars;
 
         // 8. 雙層迴圈 - 三角形
         // * 
         // ** 
         // *** 
         // **** 
+
+        var stars1 = "";
+        for(let j=1; j<=6; j++ ){
+            for(let i=1;i<=j;i++){
+                stars1 = stars1 + "*";
+            }
+            stars1 = stars1 + "<br>"
+        }
+        document.getElementById('ppp').innerHTML = stars1;    
+
+
     </script>
 </body>
 
